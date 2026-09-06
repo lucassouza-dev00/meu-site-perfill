@@ -1,0 +1,280 @@
+body {
+    background-color: #000000; /* Garante o fundo preto do seu site */
+    margin: 0;
+    padding: 0;
+}
+
+.page-content {
+    display: flex;
+    align-items: flex-start;   /* Alinha o topo do texto com o topo da foto */
+    justify-content: center;   /* Centraliza o bloco inteiro na tela */
+    gap: 40px;                 /* Distância entre a foto e o texto */
+    max-width: 1200px;
+    margin: 0 auto;            /* Centraliza o container na página */
+    padding: 20px;             /* Pequeno espaço para não colar nas bordas */
+    flex-wrap: wrap;           /* Joga o texto para baixo se abrir no celular */
+}
+
+/* Deixe a classe da imagem limpa, apenas como um bloco */
+.imagem-perfil {
+    display: block; 
+}
+
+/* Estilo da imagem circular */
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;        /* Deixa a imagem redonda */
+    object-fit: cover;         /* Impede que a foto fique distorcida ou esticada */
+}
+
+/* Caixa que segura todos os blocos de texto */
+.titulos {
+    flex: 1;                   /* Faz o bloco de texto ocupar o resto da tela */
+    min-width: 300px;          /* Impede o texto de espremer em telas menores */
+}
+
+/* Estilização dos blocos de texto internos */
+.titulo1, .titulo2, .titulo3 {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;          /* Melhora o espaçamento entre as linhas */
+    color: white;
+    margin-bottom: 25px;       /* Cria um espaço amigável entre os parágrafos */
+}
+/* --- ESTILIZAÇÃO DAS REDES SOCIAIS --- */
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-rede {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Cores específicas de cada botão */
+.linkedin { background-color: #0A66C2; }
+.github { background-color: #24292F; }
+.curriculo { background-color: #E63946; }
+
+/* Efeito ao passar o mouse nos botões */
+.btn-rede:hover {
+    transform: translateY(-4px); /* Botão sobe levemente */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2); /* Deixa a cor levemente mais viva */
+}
+
+/* --- ESTILIZAÇÃO DOS CARDS DE TECNOLOGIA --- */
+.tech-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-card {
+    background-color: #121212; /* Fundo cinza bem escuro para destacar do fundo preto */
+    border: 1px solid #222222;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.tech-card i {
+    font-size: 1.8rem;
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
+    color: white;
+}
+
+.tech-card span {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Efeito tecnológico ao passar o mouse nos cards */
+.tech-card:hover {
+    transform: translateY(-5px);
+    border-color: #00E5FF; /* Borda acende com a cor tech ciano */
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); /* Efeito de brilho neon */
+}
+/* Container que organiza as categorias verticalmente */
+.tech-categorias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Estilo do bloco de cada categoria */
+.tech-categoria-bloco h4 {
+    font-family: Arial, sans-serif;
+    color: #a0a0a0;             /* Tom de cinza claro para os subtítulos */
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;  /* Transforma o texto em maiúsculo */
+    letter-spacing: 1px;        /* Espaçamento sutil entre as letras */
+}
+/* --- ESTILIZAÇÃO DA SEÇÃO DE PROJETOS --- */
+.projetos-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* Joga os cards para baixo no celular */
+    margin-top: 20px;
+}
+
+.projeto-card {
+    background-color: #121212; /* Fundo cinza escuro para destacar do fundo preto */
+    border: 1px solid #222222;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px; /* Garante que os cards se ajustem bem em telas menores */
+    transition: all 0.3s ease;
+}
+
+.projeto-info {
+    padding: 25px;
+}
+
+.projeto-info h4 {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+}
+
+/* Badge (etiqueta) de categoria do projeto */
+.projeto-badge {
+    display: inline-block;
+    background-color: rgba(0, 229, 255, 0.1);
+    color: #00E5FF;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.projeto-info p {
+    font-family: Arial, sans-serif;
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Tags de tecnologias utilizadas dentro do projeto */
+.projeto-techs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.projeto-techs span {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #333333;
+}
+
+/* Links do GitHub e demonstração */
+.projeto-links {
+    display: flex;
+    gap: 20px;
+}
+
+.projeto-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.projeto-links a:hover {
+    color: #00E5FF; /* Muda para ciano ao passar o mouse */
+}
+
+/* Efeito moderno ao passar o mouse no card do projeto */
+.projeto-card:hover {
+    transform: translateY(-5px);
+    border-color: #00E5FF;
+    box-shadow: 0 5px 20px rgba(0, 229, 255, 0.1);
+}
+/* --- ESTILIZAÇÃO DO RODAPÉ --- */
+.rodape-site {
+    width: 100%;
+    background-color: #0c0c0c; /* Um tom de cinza quase preto para separar do fundo */
+    border-top: 1px solid #222222;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px; /* Dá um espaço confortável após a seção de projetos */
+}
+
+.rodape-site p {
+    font-family: Arial, sans-serif;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.rodape-site strong {
+    color: #00E5FF; /* Destaca seu nome com o ciano do tema */
+}
+/* --- BOTÃO VOLTAR AO TOPO --- */
+.btn-topo {
+    position: fixed;            /* Faz o botão ficar fixo na tela enquanto rola */
+    bottom: 30px;               /* Distância do fundo da página */
+    right: 30px;                /* Distância da lateral direita */
+    background-color: #00E5FF;  /* Cor ciano do seu tema */
+    color: #000000;             /* Texto preto para dar contraste */
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;                 /* Começa invisível */
+    visibility: hidden;         /* Começa escondido para não aceitar cliques */
+    z-index: 1000;              /* Garante que ele fique na frente de todos os elementos */
+}
+
+/* Efeito ao passar o mouse */
+.btn-topo:hover {
+    transform: translateY(-5px);
+    background-color: #ffffff;  /* Fica branco ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Classe que o JavaScript vai adicionar dinamicamente para mostrar o botão */
+.btn-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
